@@ -2,13 +2,13 @@
   <div class="Login-main">
     <div class="Login-bar-blue"></div>
     <div class="login-content">
-      <form class="login-form">
+      <form class="login-form" @submit.prevent="login">
         <div class="input-icon-container">
-          <input type="text" id="username" name="username" required placeholder="Usuario">
+          <input type="text" id="curp" v-model="curp" required placeholder="Usuario (CURP)">
           <font-awesome-icon icon="user" class="input-icon"/>
         </div>
         <div class="input-icon-containerpass">
-          <input type="password" id="password" name="password" required placeholder="Contraseña">
+          <input type="password" id="contraseña" v-model="contraseña" required placeholder="Contraseña">
           <font-awesome-icon icon="lock" class="input-icon-pass" />
         </div>
         <button type="submit">Iniciar Sesión</button>
@@ -21,10 +21,48 @@
 </template>
 
 <script>
+import axios from 'axios';
+import { useToast } from 'vue-toast-notification';
+
 export default {
   name: 'MainIndex',
-  props: {
-    msg: String
+  data() {
+    return {
+      curp: '',
+      contraseña: '',
+    }
+  },
+  setup() {
+    const toast = useToast();
+    return { toast };
+  },
+  methods: {
+    login() {
+      console.log("Enviando datos:", this.curp, this.contraseña);
+      axios.post('/login', {
+        curp: this.curp,
+        contraseña: this.contraseña
+      })
+      .then(response => {
+        console.log("Inicio de sesión exitoso:", response.data);
+        this.toast.success("Inicio de sesión exitoso. Bienvenido!", {
+          position: 'top-right',
+          duration: 5000,
+          dismissible: true,
+          icon: 'check'
+        });
+        this.$emit('login-success');
+      })
+      .catch(error => {
+        this.toast.error("Error al iniciar sesión. Por favor, verifica tus credenciales.", {
+          position: 'top-right',
+          duration: 5000,
+          dismissible: true,
+          icon: 'times'
+        });
+        console.error("Hubo un error al iniciar sesión:", error);
+      });
+    }
   }
 }
 </script>
