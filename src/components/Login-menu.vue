@@ -1,47 +1,68 @@
 <template>
-    <div>
+  <div class="Menu-container">
+    <div class="Navegacion-color">
       <nav>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Profile</a></li>
-          <li><a href="#">Settings</a></li>
-          <li><a href="#">Logout</a></li>
+          <li @click="navigate('AltaProducto')">Alta Producto</li>
+          <li @click="navigate('BajaProducto')">Baja Producto</li>
+          <li @click="navigate('BusquedaProducto')">Búsqueda</li>
+          <li @click="navigate('Soporte')">Soporte</li>
+          <li @click="logout">Salir</li>
         </ul>
       </nav>
     </div>
-  </template>
-  
-  <script>
-  export default {
-    name: 'LoginMenu'
+    <div class="">
+      <!-- Aquí puedes agregar contenido adicional si es necesario -->
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'LoginMenu',
+  methods: {
+    navigate(component) {
+      this.$emit('navigate', component);
+    },
+    logout() {
+      this.$emit('logout');
+    }
   }
-  </script>
-  
-  <style scoped>
-  nav {
-    background-color: #004494;
-    padding: 1rem;
-  }
-  
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 1rem;
-  }
-  
-  li {
-    display: inline;
-  }
-  
-  a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  </style>
-  
+}
+</script>
+
+<style scoped>
+.Menu-container {
+  background: rgb(246, 246, 246);
+  width: 800px;
+  height: 500px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; 
+  padding: 20px;
+  position: relative;
+}
+.Navegacion-color {
+  background: #004494;
+  height: 100%;
+  width: 200px; 
+  position: absolute;
+  top: 0px; 
+  margin-left: -20px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+li:hover {
+  background-color: #003366;
+}
+</style>
