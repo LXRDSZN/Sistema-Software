@@ -1,11 +1,15 @@
 <template>
   <div class="content-container">
-    <div class="altas-color-blue"></div>
+    <div class="altas-color-blue">
+      <div class="closexA">
+        <font-awesome-icon icon="fa-solid fa-times" class="close-icon"  @click="close"/>
+      </div>
+    </div>
     <h1>Alta de Producto</h1>
     <section class="Alta-Productos">
       <form class="container-decoration-form">
         <div class="form-group">
-          <label for="Id_producto">Nom.</label>
+          <label for="Id_producto">Id_producto </label>
           <input type="text" id="Id_producto" v-model="Id_producto" required placeholder="Producto">
         </div>
         <div class="form-group">
@@ -22,7 +26,9 @@
         </div>
         <button class="modify-button" type="button">Modificar</button>
       </form>
-      <div class="upload-section">
+
+      <section class="subir-producto">
+        <div class="upload-section">
         <label for="product-select">Producto</label>
         <select id="product-select" v-model="selectedProduct">
           <option value="" disabled>Seleccionar producto</option>
@@ -35,6 +41,8 @@
           </div>
         </div>
       </div>
+      </section>
+     
       <div class="button-section">
         <button class="cancel-button" type="button">Cancelar</button>
         <button class="add-button" type="button">Agregar</button>
@@ -55,10 +63,22 @@ export default {
       selectedProduct: ''
     }
   }
+  ,
+  methods: {
+    close() {
+      this.$emit('close');
+    }
+  }
 }
 </script>
 
 <style scoped>
+
+.subir-producto{
+  background: #ffffff;
+  margin-top: -250px;
+  margin-left: 220px;
+}
 .content-container {
   background: rgb(255, 255, 255);
   width: 600px;
@@ -100,6 +120,7 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  margin-left: -350px;
 }
 
 .form-group {
@@ -135,6 +156,7 @@ h1 {
   padding: 10px 20px;
   cursor: pointer;
   align-self: center;
+  margin-top: 50px;
 }
 
 .upload-section {
@@ -160,8 +182,9 @@ h1 {
 .button-section {
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  width: 100px;
   margin-top: 20px;
+  margin-left: 100px;
 }
 
 .cancel-button, .add-button {
@@ -182,5 +205,13 @@ h1 {
 .add-button {
   background-color: green;
   color: white;
+  
+}
+.closexA{
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+  padding: 12px;
+  margin-left: 590px;
 }
 </style>

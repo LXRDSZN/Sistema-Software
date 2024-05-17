@@ -2,10 +2,10 @@
   <div>
     <MainIndex v-if="currentComponent === 'MainIndex'" @login-success="handleLoginSuccess" />
     <LoginMenu v-if="currentComponent === 'LoginMenu'" @navigate="handleNavigation" @logout="handleLogout" />
-    <AltaProducto v-if="currentComponent === 'AltaProducto'" />
-    <BajaProducto v-if="currentComponent === 'BajaProducto'" />
-    <BusquedaProducto v-if="currentComponent === 'BusquedaProducto'" />
-    <Soporte v-if="currentComponent === 'Soporte'" />
+    <AltaProducto v-if="currentComponent === 'AltaProducto'" @close="handleClose" />
+    <BajaProducto v-if="currentComponent === 'BajaProducto'" @close="handleClose" />
+    <BusquedaProducto v-if="currentComponent === 'BusquedaProducto'" @close="handleClose" />
+    <Soporte v-if="currentComponent === 'Soporte'" @close="handleClose" />
   </div>
 </template>
 
@@ -41,6 +41,9 @@ export default {
     },
     handleNavigation(component) {
       this.currentComponent = component;
+    },
+    handleClose() {
+      this.currentComponent = 'LoginMenu';
     }
   }
 }

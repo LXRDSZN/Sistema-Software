@@ -1,6 +1,10 @@
 <template>
   <div class="Login-main">
-    <div class="Login-bar-blue"></div>
+    <div class="Login-bar-blue">
+      <div class="closex">
+        <font-awesome-icon icon="fa-solid fa-times" class="close-icon" @click="close"  />
+      </div>
+    </div>
     <div class="login-content">
       <form class="login-form" @submit.prevent="login">
         <div class="input-icon-container">
@@ -14,7 +18,7 @@
         <button type="submit">Iniciar Sesión</button>
       </form>
       <div class="logo-rh">
-        <img src="/src/assets/rh.jpg">
+        <img :src="require('@/assets/rh.jpg')" alt="RH Logo">
       </div>
     </div>
   </div>
@@ -184,5 +188,13 @@ button:hover {
   width: 100%; 
   max-width: 150px; 
   margin-left: 20px; 
+}
+
+.closex{
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+  padding: 12px;
+  margin-left: 790px;
 }
 </style>
