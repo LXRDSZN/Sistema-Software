@@ -56,7 +56,7 @@
   
   <style scoped>
   .Menu-container{
-    background: #ffff;
+    background: #f4fbfe;
     width: 800px;
     height: 500px;
     border-radius: 20px;

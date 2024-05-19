@@ -75,7 +75,7 @@ export default {
 <style scoped>
 
 .subir-producto{
-  background: #ffffff;
+  background: #f4fbfe;
   margin-top: -250px;
   margin-left: 220px;
 }

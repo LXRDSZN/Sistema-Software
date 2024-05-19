@@ -18,7 +18,7 @@
         <button type="submit">Iniciar Sesión</button>
       </form>
       <div class="logo-rh">
-        <img :src="require('@/assets/rh.jpg')" alt="RH Logo">
+        <img :src="require('@/assets/logo-papeleria.png')" alt="RH Logo">
       </div>
     </div>
   </div>
@@ -119,7 +119,7 @@ body {
 }
 
 .Login-main {
-  background: rgb(246, 246, 246);
+  background: #f4fbfe;
   width: 800px;
   height: 500px;
   border-radius: 20px;

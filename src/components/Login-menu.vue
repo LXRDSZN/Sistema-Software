@@ -16,6 +16,14 @@
         </ul>
       </nav>
     </div>
+    <div class="login-welcome">
+      <h1>WELCOME</h1>
+      <h2>Ventas</h2>
+      <div class="button-welcome">
+        <button @click="navigate('')">Estado de venta</button>
+        <button @click="navigate('')">Análisis de Inventario</button>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -35,13 +43,12 @@ export default {
 
 <style scoped>
 .Menu-container {
-  background: rgb(246, 246, 246);
+  background: #f4fbfe;
   width: 800px;
   height: 500px;
   border-radius: 20px;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start; 
+  flex-direction: row; /* Cambiado de column a row */
   padding: 20px;
   position: relative;
 }
@@ -51,7 +58,7 @@ export default {
   height: 100%;
   width: 200px; 
   position: absolute;
-  top: 0px; 
+  top: 0;
   margin-left: -20px;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
@@ -83,7 +90,7 @@ export default {
 .bottom-menu {
   list-style-type: none;
   padding: 0;
-  margin-bottom: 20px; /* Ajusta según sea necesario */
+  margin-bottom: 20px;
 }
 
 li {
@@ -98,5 +105,52 @@ li:hover {
 
 li i {
   margin-left: 10px;
+}
+
+.login-welcome {
+  background: #f4fbfe;
+  color: black;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Cambiado de center a flex-start */
+  padding-left: 250px; /* Ajustar según sea necesario */
+  justify-content: center;
+}
+
+h1 {
+  font-size: 40px;
+  color: black;
+  margin-top: -200px;
+  margin-left: 150px;
+}
+
+h2 {
+  font-size: 45px;
+  font-family: Arapey;
+  color: black;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.button-welcome {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.button-welcome button {
+  background: #004494;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+}
+
+.button-welcome button:hover {
+  background-color: #003366;
 }
 </style>
