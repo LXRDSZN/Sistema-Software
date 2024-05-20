@@ -2,13 +2,13 @@ import { createApp } from 'vue';
 import App from './App.vue';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faUser, faLock, faBars, faHeadset , faTimes} from '@fortawesome/free-solid-svg-icons'; // Importar los iconos adicionales
+import { faUser, faLock, faBars, faHeadset, faTimes, faCheck, faExclamationTriangle } from '@fortawesome/free-solid-svg-icons'; // Importar los iconos adicionales
 import axios from 'axios';
 import VueToast from 'vue-toast-notification';
 import 'vue-toast-notification/dist/theme-sugar.css';
 
 // Agrega los iconos que desees utilizar
-library.add(faUser, faLock, faBars, faHeadset,faTimes);
+library.add(faUser, faLock, faBars, faHeadset, faTimes, faCheck, faExclamationTriangle);
 
 // Crear la aplicación
 const app = createApp(App);
