@@ -5,6 +5,7 @@
     <AltaProducto v-if="currentComponent === 'AltaProducto'" @close="handleClose" />
     <BajaProducto v-if="currentComponent === 'BajaProducto'" @close="handleClose" />
     <BusquedaProducto v-if="currentComponent === 'BusquedaProducto'" @close="handleClose" />
+    <VentaProducto v-if="currentComponent === 'VentaProducto'" @close="handleClose" />
     <Soporte v-if="currentComponent === 'Soporte'" @close="handleClose" />
   </div>
 </template>
@@ -16,6 +17,7 @@ import AltaProducto from './components/Alta-producto.vue'
 import BajaProducto from './components/Baja-producto.vue'
 import BusquedaProducto from './components/busqueda-producto.vue'
 import Soporte from './components/Soporte.vue'
+import VentaProducto from './components/Venta-Producto.vue'
 
 export default {
   name: 'App',
@@ -25,7 +27,8 @@ export default {
     AltaProducto,
     BajaProducto,
     BusquedaProducto,
-    Soporte
+    Soporte,
+    VentaProducto
   },
   data() {
     return {

@@ -20,7 +20,7 @@
       <h1>WELCOME</h1>
       <h2>Ventas</h2>
       <div class="button-welcome">
-        <button @click="navigate('')">Estado de venta</button>
+        <button @click="navigate('VentaProducto')">Estado de venta</button>
         <button @click="navigate('')">Análisis de Inventario</button>
       </div>
     </div>

@@ -21,9 +21,7 @@
         <img :src="require('@/assets/logo-papeleria.png')" alt="RH Logo">
       </div>
     </div>
-    <div class="engranaje-rh">
-      <img :src="require('@/assets/Engranaje.png')" alt="RH Engranaje">
-    </div>
+   
   </div>
 </template>
 
