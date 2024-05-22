@@ -2,14 +2,14 @@
   <div class="Login-main">
     <div class="Login-bar-blue">
       <div class="closex">
-        <font-awesome-icon icon="fa-solid fa-times" class="close-icon" @click="close"  />
+        <font-awesome-icon icon="fa-solid fa-times" class="close-icon" @click="close" />
       </div>
     </div>
     <div class="login-content">
       <form class="login-form" @submit.prevent="login">
         <div class="input-icon-container">
           <input type="text" id="curp" v-model="curp" required placeholder="Usuario (CURP)">
-          <font-awesome-icon icon="user" class="input-icon"/>
+          <font-awesome-icon icon="user" class="input-icon" />
         </div>
         <div class="input-icon-containerpass">
           <input type="password" id="contraseña" v-model="contraseña" required placeholder="Contraseña">
@@ -20,6 +20,9 @@
       <div class="logo-rh">
         <img :src="require('@/assets/logo-papeleria.png')" alt="RH Logo">
       </div>
+    </div>
+    <div class="engranaje-rh">
+      <img :src="require('@/assets/Engranaje.png')" alt="RH Engranaje">
     </div>
   </div>
 </template>
@@ -81,12 +84,12 @@ export default {
 
 .input-icon-containerpass input {
   flex-grow: 1;
-  padding-right: 30px; 
+  padding-right: 30px;
 }
 
 .input-icon-containerpass .input-icon-pass {
   position: absolute;
-  right: 10px; 
+  right: 10px;
   color: #060505;
 }
 
@@ -99,12 +102,12 @@ export default {
 
 .input-icon-container input {
   flex-grow: 1;
-  padding-right: 30px; 
+  padding-right: 30px;
 }
 
 .input-icon-container .input-icon {
   position: absolute;
-  right: 10px; 
+  right: 10px;
   color: #060505;
 }
 
@@ -114,8 +117,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; 
-  margin: 0; 
+  height: 100vh;
+  margin: 0;
 }
 
 .Login-main {
@@ -126,7 +129,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start; 
+  justify-content: flex-start;
   padding: 20px;
   position: relative;
 }
@@ -134,10 +137,10 @@ body {
 .Login-bar-blue {
   background: #004494;
   height: 50px;
-  width: 840px; 
+  width: 840px;
   margin-bottom: 20px;
   position: absolute;
-  top: 0px; 
+  top: 0px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
@@ -147,15 +150,15 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 650px;
-  margin-top: 25%; 
+  max-width: 700px;
+  margin-top: 18%;
 }
 
 .login-form {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 50%; 
+  width: 50%;
 }
 
 .login-form input {
@@ -185,16 +188,27 @@ button:hover {
 }
 
 .logo-rh img {
-  width: 100%; 
-  max-width: 150px; 
-  margin-left: 20px; 
+  width: 100%;
+  max-width: 250px;
+  margin-left: 20px;
 }
 
-.closex{
+.closex {
   color: white;
   font-size: 25px;
   cursor: pointer;
   padding: 12px;
   margin-left: 790px;
+}
+
+.engranaje-rh {
+  bottom: 50px; /* Ajusta esta posición según sea necesario */
+  margin-left: -800px; /* Ajusta esta posición según sea necesario */
+  margin-top: 30px;
+}
+
+.engranaje-rh img {
+  width: 150px; /* Ajusta el tamaño según sea necesario */
+  height: 150px; /* Ajusta el tamaño según sea necesario */
 }
 </style>

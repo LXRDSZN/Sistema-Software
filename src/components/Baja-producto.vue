@@ -43,7 +43,7 @@
               <font-awesome-icon icon="fa-solid fa-times" class="close-icon" @click="closeFirstModal"/>
             </div>
           </div>
-          <h2>¿Estás seguro de dar de baja a este usuario?</h2>
+          <h2>¿Estás seguro de dar de baja a este Producto?</h2>
           <p>Esta acción es irreversible</p>
           <div class="modal-buttons">
             <button class="modal-button red-button" @click="showSecondModal">Continuar</button>
