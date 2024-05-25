@@ -111,7 +111,7 @@
     background: white;
     width:100%x;
     height: 350px;
-    margin-top:100px;
+    margin-top:80px;
     margin-left: -700px;
   }
   .container-decoration-form {
@@ -145,8 +145,8 @@
   .modal-buttons {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
-    gap: 20px;
+    margin-top: 60px;
+    gap: 250px;
   }
 
   .modal-buttons button {
