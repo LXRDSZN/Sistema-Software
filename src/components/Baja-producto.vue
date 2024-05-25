@@ -10,7 +10,7 @@
       <section class="Baja-Productos">
         <form class="container-decoration-form">
           <div class="form-group">
-            <label for="Id_producto">Nom.</label>
+            <label for="Id_producto">Id_producto</label>
             <input type="text" id="Id_producto" v-model="Id_producto" required placeholder="Producto">
           </div>
           <div class="form-group">

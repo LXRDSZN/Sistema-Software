@@ -24,6 +24,8 @@
         <button @click="navigate('')">Análisis de Inventario</button>
       </div>
     </div>
+    <img :src="require('@/assets/circular.png')" alt="Circular bar" class="caracteristicascir">
+    <img :src="require('@/assets/barra.png')" alt="Circular bar" class="caracteristicascir2">
   </div>
 </template>
 
@@ -42,6 +44,18 @@ export default {
 </script>
 
 <style scoped>
+.caracteristicascir{
+  width: 350px;
+  height: 280px;
+  margin-top: 100px;
+  margin-left: -100px;
+}
+.caracteristicascir2{
+  width: 300px;
+  height: 250px;
+  margin-left: -280PX;
+  margin-top: 320px;
+}
 .Menu-container {
   background: #f4fbfe;
   width: 800px;

@@ -10,23 +10,27 @@
         <div class="container-buttons">
           <div class="container-cuestions">
             <form class="container-decoration-form">
-          <div class="form-group">
-            <label for="Id_producto">Id_Producto.</label>
-            <input type="text" id="Id_producto" v-model="Id_producto" required placeholder="Producto">
-          </div>
-          <div class="form-group">
-            <label for="Nom_producto">Nombre</label>
-            <input type="text" id="Nom_producto" v-model="Nom_producto" required placeholder="Nombre">
-          </div>
-          <div class="form-group">
-            <label for="Cantidad_producto">Fecha</label>
-            <input type="text" id="Cantidad_producto" v-model="Cantidad_producto" required placeholder="Fecha de Venta">
-          </div>
-          <div class="form-group">
-            <label for="Precio_producto">Monto</label>
-            <input type="text" id="Precio_producto" v-model="Precio_producto" required placeholder="Precio">
-          </div>
-        </form>
+              <div class="form-group">
+                <label for="Id_producto">Id_Producto.</label>
+                <input type="text" id="Id_producto" v-model="Id_producto" required placeholder="Producto">
+              </div>
+              <div class="form-group">
+                <label for="Nom_producto">Nombre</label>
+                <input type="text" id="Nom_producto" v-model="Nom_producto" required placeholder="Nombre">
+              </div>
+              <div class="form-group">
+                <label for="Cantidad_producto">Fecha</label>
+                <input type="text" id="Cantidad_producto" v-model="Cantidad_producto" required placeholder="Fecha de Venta">
+              </div>
+              <div class="form-group">
+                <label for="Precio_producto">Monto</label>
+                <input type="text" id="Precio_producto" v-model="Precio_producto" required placeholder="Precio">
+              </div>
+            </form>
+            <div class="modal-buttons">
+              <button class="modal-button" @click="showSecondModal">Pagar</button>
+              <button class="modal-button" @click="closeFirstModal">Cancelar</button>
+            </div>
           </div>
         </div>      
     </div>
@@ -137,6 +141,34 @@
   }
   .form-group input:focus {
     border-bottom: 2px solid #87CEEB;
+  }
+  .modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 20px;
+  }
+
+  .modal-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .modal-buttons .modal-button {
+    border-radius: 20px; /* Redondeado de los botones */
+  }
+
+  .modal-buttons button:first-child {
+    background-color: #40B8F5;
+    color: white;
+  }
+
+  .modal-buttons button:last-child {
+    background-color: black;
+    color: white;
   }
 
 </style>

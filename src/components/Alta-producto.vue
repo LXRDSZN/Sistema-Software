@@ -333,7 +333,7 @@ h1 {
   flex-direction: column;
   align-items: center;
   cursor: pointer;
-  margin-top: -300px;
+  margin-top: -100px;
 }
 
 .upload-icon {
