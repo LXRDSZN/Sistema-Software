@@ -1,7 +1,6 @@
 <template>
     <div class="Menu-container">
       <div class="Navegacion-color">
-
       </div>
         <div class="icon-title">
           <font-awesome-icon icon="fa-solid fa-times" class="close-icon" @click="close"/>
@@ -26,6 +25,7 @@
                 <label for="Precio_producto">Monto</label>
                 <input type="text" id="Precio_producto" v-model="Precio_producto" required placeholder="Precio">
               </div>
+              <font-awesome-icon icon="user"  class="icon-venta-decoration"/>
             </form>
             <div class="modal-buttons">
               <button class="modal-button" @click="showSecondModal">Pagar</button>
@@ -54,6 +54,13 @@
   </script>
   
   <style scoped>
+  .icon-venta-decoration{
+    margin-left: 430px;
+    margin-top:-150px;
+    width: 90px;
+    height: 80px;
+    color: #004494;
+  }
   .Menu-container {
     background: #ffffff;
     width: 800px;
@@ -61,7 +68,7 @@
     border-radius: 20px;
     display: flex;
     flex-direction: row; /* Cambiado de column a row */
-    padding: 20px;
+    padding: 00px;
     position: relative;
   }
   
@@ -81,11 +88,11 @@
 
   .icon-title{
     background: white;
-    width: 620px;
+    width: 610px;
     height: 50px;
     margin-left:200px;
     border-top-right-radius: 20px;
-    margin-top:-20px ;
+    margin-top:0px ;
   }
   h1{
     color: black;
@@ -101,18 +108,19 @@
     margin-left:95% ;
   }
   .container-cuestions{
-    background: white;
-    width: 520px;
+    background: rgb(255, 255, 255);
+    width: 450px;
     height: 300px;
-    margin-top:100px;
-    margin-left: 100px;
+    margin-top:30px;
+    margin-left: 120px;
   }
   .container-buttons{
-    background: white;
-    width:100%x;
-    height: 350px;
-    margin-top:80px;
+    background: rgb(255, 255, 255);
+    width: 750px;
+    height: 400px;
+    margin-top:100px;
     margin-left: -700px;
+    border-radius: 20px;
   }
   .container-decoration-form {
     display: flex;
@@ -150,11 +158,12 @@
   }
 
   .modal-buttons button {
-    padding: 10px 20px;
+    padding: 10px 0px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    margin-top: 70px;
   }
 
   .modal-buttons .modal-button {
