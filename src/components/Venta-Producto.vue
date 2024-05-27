@@ -1,6 +1,7 @@
 <template>
     <div class="Menu-container">
       <div class="Navegacion-color">
+        <img :src="require('@/assets/Diner.png')" alt="Money" class="Money-decoraion">
       </div>
         <div class="icon-title">
           <font-awesome-icon icon="fa-solid fa-times" class="close-icon" @click="close"/>
@@ -54,6 +55,9 @@
   </script>
   
   <style scoped>
+  .Money-decoraion{
+    margin-top: 40%;
+  }
   .icon-venta-decoration{
     margin-left: 430px;
     margin-top:-150px;
@@ -154,11 +158,11 @@
     display: flex;
     justify-content: space-between;
     margin-top: 60px;
-    gap: 250px;
+    gap: 150px;
   }
 
   .modal-buttons button {
-    padding: 10px 0px;
+    padding: 10px 30px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
