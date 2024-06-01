@@ -158,11 +158,11 @@
     display: flex;
     justify-content: space-between;
     margin-top: 60px;
-    gap: 150px;
+    gap: 90px; 
   }
 
   .modal-buttons button {
-    padding: 10px 30px;
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
